@@ -1,0 +1,21 @@
+<div class="p-4"> 
+    <h4 class="text-center font-bold">Text Summariser with AI</h4>
+
+    <div class="pt-4 flex flex-col justify-center items-center gap-4">
+        <textarea [formControl]="textToSummarise" class="border border-gray-600 flex justify-center p-2 w-3/4 h-64" placeholder="Enter text to summarise..."></textarea>
+        <button (click)="summariseText()" class="ml-4 bg-blue-500 text-white px-4 py-2 w-50 rounded cursor-auto">
+            Let's Summarise
+        </button>
+    </div>
+
+    <div class="pt-6 flex flex-col justify-center items-center gap-4" *ngIf="summaryResult()">
+        <h5 class="text-center font-bold">Summarised Text:</h5>
+        <p class="border border-gray-600 flex justify-center p-2 w-3/4 h-64">{{ summaryResult() }}</p>
+
+    </div>
+
+
+
+
+</div>
+
